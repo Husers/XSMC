@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mappers.HelloWorldMapper">
+    <resultMap id="DualzMap" type="com.ssm.model.Dualz">
+        <result column="WORD" property="word" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="showHello" resultMap="DualzMap">
+        select * from dualz
+    </select>
+</mapper>
